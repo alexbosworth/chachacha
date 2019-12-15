@@ -1,0 +1,29 @@
+{
+  "bugs": {
+    "url": "https://github.com/alexbosworth/chachacha/issues"
+  },
+  "contributors": [
+    "Alex Bosworth",
+    "Arik Sosman"
+  ],
+  "description": "ChaCha cipher library",
+  "devDependencies": {
+    "tap": "14.10.2"
+  },
+  "engines": {
+    "node": ">=10.12.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "chachacha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexbosworth/chachacha.git"
+  },
+  "scripts": {
+    "compile": "pushd ./native; wasm-pack build -t nodejs -d ../out",
+    "extract": "mkdir -p ./bin; cp ./out/chachacha* ./bin",
+    "test": "tap test/*.js"
+  },
+  "version": "0.0.1"
+}

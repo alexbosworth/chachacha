@@ -1,0 +1,19 @@
+[package]
+authors = ["Alex Bosworth", "Arik Sosman <git@arik.io>"]
+description = "ChaCha"
+edition = "2018"
+license = "MIT"
+name = "chachacha"
+repository = "https://github.com/alexbosworth/chachacha.git"
+version = "0.0.1"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bitcoin_hashes = "0.7"
+wasm-bindgen = "0.2"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
